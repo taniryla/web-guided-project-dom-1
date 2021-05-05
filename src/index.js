@@ -4,21 +4,37 @@
 //  Select the following single elements from the div.card
 
 // A- finding across the entire DOM
-const header = null
-const logoTitle = null
-const firstCard = null
-// B- finding within one particular element
-const imageFirstCard = null
-const titleFirstCard = null
-const subtitleFirstCard = null
-const textFirstCard = null
-// C- traversing with dot notation
-const link1FirstCard = null
-const link2FirstCard = null
+const header = document.getElementsByClassName('')
+const logoContainer = document.getElementsByClassName('logo-container')
 
+const logoHeading = document.getElementById('logoTitle')
+
+const logoTitle = document.querySelector('#logoTitle')
+
+const firstCard = document.getElementsByClassName('card')[0];
+
+const allCards = document.querySelectorAll('.card')
+const allMenuItems = document.querySelectorAll('.menu-item')
+
+// B- finding within one particular element
+const imageFirstCard = firstCard.querySelector('img')
+const titleFirstCard = firstCard.querySelector('h2')
+const subtitleFirstCard = firstCard.querySelector('h3') 
+const textFirstCard = firstCard.querySelector('p')
+
+// C- traversing with dot notation
+const link1FirstCard = textFirstCard.nextElementSibling
+const link2FirstCard = link1FirstCard.nextElementSibling
+
+console.log(link2FirstCard.textContent)
 
 // 👉 2- Finding collections of elements in the DOM
+// A0: Get the nav element
+const nav = document.querySelector('#mainNav')
 // A- Find all the anchor tags inside the nav element
+
+const navTags = document.querySelectorAll('nav > a')
+
 // B- Loop over the links and console.log their text content
 // C- Turn the collection of links into a real array
 // D- Use .filter to find the anchor tag with the textContent of "Home"
